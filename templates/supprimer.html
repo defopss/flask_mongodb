@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    input[type="submit"] { 
+   width: 50%;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   -ms-border-radius: 5px;
+   padding: 17px 20px;
+   box-sizing: border-box;
+   font-size: 10px;
+   font-weight: 700;
+   color: #FDFEFE ;
+   text-transform: uppercase;
+   border: none;
+   background-color :#5DADE2;
+
+    }
+    label{
+        font-size:70%;
+        }
+        
+        from post
+        
+           body{
+               margin: 10px;}
+  </style>
+   <div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row align-items-center">
+            <div class="col-6">
+               
+                <h1 class="mb-0 fw-bold">Suppression des services</h1> 
+                <form method="post" >
+                    <p>
+                        <label for="Services">Quel service supprimer-vous ?</label><br />
+                        <select name="services" id="services"><br>
+                            <option value="Télematique">Télematique</option>
+                            <option value="Drone">Drone</option>
+                    </p>
+                          </select>
+                          <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="supperimer"/>
+                        </div>
+                 </form>
+            </div>
+          
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        
+                </div>
+            </div>
+        </div>
+    {% endblock %}

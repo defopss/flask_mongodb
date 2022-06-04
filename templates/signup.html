@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S'inscrie</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/login/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/login/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form action="/admin/signup" method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Créer un compte</h2>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            
+                            {% for message in messages %}
+                            
+                                <div class="alert alert-danger" role="alert">
+                                    <div>{{ message }}</div>
+                                </div>
+                            {% endfor %}
+                            
+                        {% endif %}
+                        {% endwith %}
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="votre nom"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="adresse mail"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password1" id="password1" placeholder="mot de passe"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password2" id="password2" placeholder="Répeter votre mot de passe"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>Je suis d'accord avec toutes les déclarations dans  <a href="#" class="term-service"> Conditions d'utilisation </a></label>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="S'inscrire"/>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                       Vous avez déjà un compte ?<a href="#" class="loginhere-link"><nav><a href ="/admin/login"> connectez-vous ici </a></nav></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="/static/login/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/login/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
